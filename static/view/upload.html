@@ -72,10 +72,10 @@
     $.ajax({
       url: upUrl,
       type: 'POST',
-      // cache: false,
+      cache: false,
       data: new FormData($('#upForm')[0]),
-      // processData: false,
-      // contentType: false,
+      processData: false,
+      contentType: false,
       error: function (err) {
         alert('请求报错信息: ' + JSON.stringify(err));
       },
