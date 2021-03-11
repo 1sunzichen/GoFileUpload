@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"encoding/json"
 	"filestore-server/meta"
 	"filestore-server/util"
 	"fmt"
@@ -55,4 +56,75 @@ func UploadHandler(w http.ResponseWriter,r *http.Request){
 //上传已完成
 func UploadSucHandler(w http.ResponseWriter,r *http.Request){
 	io.WriteString(w,"Upload finished")
+}
+//获取文件元信息
+func GetFileMetaHandler(w http.ResponseWriter,r *http.Request){
+	r.ParseForm()
+	filehash:=r.Form["filehash"][0]
+	fMeta:=meta.GetFileMeta(filehash)
+	d,err:=json.Marshal(fMeta)
+	if err!=nil{
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+	w.Write(d)
+}
+
+
+func DownloadHandler(w http.ResponseWriter,r *http.Request){
+	r.ParseForm()
+	fsha1:=r.Form.Get("filehash")
+	fm:=meta.GetFileMeta(fsha1)
+	f,err:=os.Open(fm.Location)
+	if err!=nil{
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+	defer f.Close()
+	//小文件
+	data,err:=ioutil.ReadAll(f)
+	if err !=nil{
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+	//http.
+	w.Header().Set("Content-Type","application/octect-stream")
+	w.Header().Set("content-disposition","attachment;filename=\""+fm.FileName)
+	w.Write(data)
+}
+func FileMetaUpdateHandler(w http.ResponseWriter,r *http.Request){
+	r.ParseForm()
+	opType:=r.Form.Get("op")
+	fileSha1:=r.Form.Get("filehash")
+	newFileName:=r.Form.Get("filename")
+	if opType!="0"{
+		w.WriteHeader(http.StatusForbidden)
+		return
+	}
+	if r.Method!="POST"{
+		w.WriteHeader(http.StatusMethodNotAllowed)
+		return
+	}
+
+	curFileMeta:=meta.GetFileMeta(fileSha1)
+	curFileMeta.FileName=newFileName
+	meta.UpdateFileMeta(curFileMeta)
+	data,err:=json.Marshal(curFileMeta)
+	if err !=nil{
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+	w.WriteHeader(http.StatusOK)
+	w.Write(data)
+
+}
+//删除接口
+func FileDeleteHandler(w http.ResponseWriter,r *http.Request){
+	r.ParseForm()
+	filesha1:=r.Form.Get("filehash")
+	fmeta:=meta.GetFileMeta(filesha1)
+	os.Remove(fmeta.Location)
+	meta.RemoveFileMeta(filesha1)
+
+	w.WriteHeader(http.StatusOK)
 }

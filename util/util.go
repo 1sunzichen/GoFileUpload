@@ -30,6 +30,7 @@ func Sha1(data []byte) string {
 	_sha1.Write(data)
 	return hex.EncodeToString(_sha1.Sum([]byte("")))
 }
+//ce1155eb4ffb11741a7ae0dba630fcc8981472a2
 
 func FileSha1(file *os.File) string {
 	_sha1 := sha1.New()
