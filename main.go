@@ -14,7 +14,7 @@ func main(){
 	fs := http.FileServer(http.Dir("static/"))
 	//StripPrefix返回一个处理器，该处理器会将请求的URL.Path字段中给定前缀prefix去除后再交由h处理。
 	//StripPrefix会向URL.Path字段中没有给定前缀的请求回复404 page not found。
-	http.Handle("/static", http.StripPrefix("static/", fs))
+	http.Handle("/static/", http.StripPrefix("/static", fs))
 
 	//http.Handle("/", http.FileServer(http.Dir("/static")))
 	http.HandleFunc("/file/upload",handler.UploadHandler)

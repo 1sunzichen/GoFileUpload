@@ -35,6 +35,7 @@ func Sha1(data []byte) string {
 func FileSha1(file *os.File) string {
 	_sha1 := sha1.New()
 	io.Copy(_sha1, file)
+	//log
 	return hex.EncodeToString(_sha1.Sum(nil))
 }
 

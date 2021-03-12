@@ -32,7 +32,7 @@ func UploadHandler(w http.ResponseWriter,r *http.Request){
 
             fileMeta:=meta.FileMeta{
             	FileName: head.Filename,
-            	Location: "./static/file/"+head.Filename,
+            	Location: "static/file/"+head.Filename,
             	UploadAt: time.Now().Format("2016-01-02"),
 
 			}
@@ -65,7 +65,12 @@ func GetFileMetaHandler(w http.ResponseWriter,r *http.Request){
 	//解析结果中，POST或PUT请求主体要优先于URL查询字符串（同名变量，主体的值在查询字符串的值前面）。
 	r.ParseForm()
 	filehash:=r.Form["filehash"][0]
-	fMeta:=meta.GetFileMeta(filehash)
+	//fMeta:=meta.GetFileMeta(filehash)
+	fMeta,err:=meta.GetFileMetaDB(filehash)
+	if err!=nil{
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
 	d,err:=json.Marshal(fMeta)
 	if err!=nil{
 		w.WriteHeader(http.StatusInternalServerError)
