@@ -49,7 +49,8 @@ func UploadHandler(w http.ResponseWriter,r *http.Request){
 			}
 			newFile.Seek(0,0)
             fileMeta.FileSha1=util.FileSha1(newFile)
-            meta.UpdateFileMeta(fileMeta)
+            //meta.UpdateFileMeta(fileMeta)
+            _=meta.UpdateFileMetaDb(fileMeta)
 			http.Redirect(w,r,"/file/upload/suc",http.StatusFound)
 		}
 }
@@ -59,6 +60,9 @@ func UploadSucHandler(w http.ResponseWriter,r *http.Request){
 }
 //获取文件元信息
 func GetFileMetaHandler(w http.ResponseWriter,r *http.Request){
+	//ParseForm解析URL中的查询字符串，并将解析结果更新到r.Form字段。
+	//对于POST或PUT请求，ParseForm还会将body当作表单解析，并将结果既更新到r.PostForm也更新到r.Form。
+	//解析结果中，POST或PUT请求主体要优先于URL查询字符串（同名变量，主体的值在查询字符串的值前面）。
 	r.ParseForm()
 	filehash:=r.Form["filehash"][0]
 	fMeta:=meta.GetFileMeta(filehash)

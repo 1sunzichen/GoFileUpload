@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <button onclick="getHex()">获取16进制的值</button>
+</body>
+<script>
+    document.cookie="name="+"6a6b696e67";
+    function getHex(){
+
+    }
+
+    console.log(stringToHex("jking"),hexToString("\u006a\u006b\u0069\u006e\u0067"))
+    function hexToString(str) {
+        return unescape(str.replace(/\\/g, "%"));
+    }
+    function stringToHex(str) {
+        var arr = [];
+        for (var i = 0; i < str.length; i++) {
+            arr[i] = ("00" + str.charCodeAt(i).toString(16)).slice(-4);
+        }
+        return "\\u" + arr.join("\\u");
+    }
+</script>
+</html>
