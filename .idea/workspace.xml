@@ -19,17 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2a9c0d4-a371-447d-802a-da151a9451e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lua/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/resp.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meta/filemeta.go" beforeDir="false" afterPath="$PROJECT_DIR$/meta/filemeta.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/view/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/view/signin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/view/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/view/signup.html" afterDir="false" />
-    </list>
+    <list default="true" id="f2a9c0d4-a371-447d-802a-da151a9451e6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +50,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/db" />
     <property name="settings.editor.selected.configurable" value="yiiguxing.plugin.translate" />
   </component>
   <component name="RecentsManager">
