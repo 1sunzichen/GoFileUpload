@@ -54,10 +54,10 @@
           <tr style="margin-bottom: 20px;">
             <td>
               <span class="p">*</span>
-              <label for="passwordc" class="l"> 确认密码:</label>
+              <label for="phone" class="l"> 电话:</label>
             </td>
             <td>
-              <input id="passwordc" type="password" style="height:30px;width:250px;padding-right:50px;">
+              <input id="phone" type="text" style="height:30px;width:250px;padding-right:50px;">
             </td>
           </tr>
           <tr>
@@ -83,23 +83,26 @@
   function onSignup() {
     var username = document.getElementById('username');
     var password = document.getElementById('password');
+    var phone = document.getElementById('phone');
     $.ajax({
       url: "/user/signup",
       type: "POST",
       data: {
         "username": username.value,
-        "password": password.value
+        "password": password.value,
+        "phone":phone.value,
       },
       error: function (err) {
         alert(JSON.stringify(err));
       },
       success: function (resp) {
-        if (resp.code == 10000) {
-          alert("注册成功");
-          window.location.href = "/user/signin";
-        } else {
-          alert("注册失败");
-        }
+        console.log(resp,'resp')
+        // if (resp.code == 10000) {
+        //   alert("注册成功");
+        //   window.location.href = "/user/signin";
+        // } else {
+        //   alert("注册失败");
+        // }
       }
     });
   }

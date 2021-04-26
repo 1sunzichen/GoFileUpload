@@ -22,8 +22,9 @@ func main(){
 	http.HandleFunc("/file/meta",handler.GetFileMetaHandler)
 	http.HandleFunc("/file/download",handler.DownloadHandler)
 	http.HandleFunc("/file/update",handler.FileMetaUpdateHandler)
+	http.HandleFunc("/user/signin",handler.SignInHandler)
 	http.HandleFunc("/file/delete",handler.FileDeleteHandler)
-
+	http.HandleFunc("/user/signup",handler.SignupHandler)
 	err:=http.ListenAndServe(":8080",nil)
 	if err!=nil{
 		fmt.Printf("Filed to start server",err.Error())

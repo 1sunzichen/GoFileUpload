@@ -20,13 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2a9c0d4-a371-447d-802a-da151a9451e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/db/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/handler/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lua/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/resp.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/file.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/file.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/mysql/conn.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/mysql/conn.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/handler.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/meta/filemeta.go" beforeDir="false" afterPath="$PROJECT_DIR$/meta/filemeta.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/util.go" beforeDir="false" afterPath="$PROJECT_DIR$/util/util.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/view/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/view/signin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/view/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/view/signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +74,7 @@
       <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.go build filestore-server/lua">
     <configuration name="go build filestore-server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="filestore-server" />
       <working_directory value="$PROJECT_DIR$" />
@@ -82,8 +84,18 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="go build filestore-server/lua" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="filestore-server" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/lua/main.go" />
+      <package value="filestore-server/lua" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build filestore-server/lua" />
         <item itemvalue="Go Build.go build filestore-server" />
       </list>
     </recent_temporary>
@@ -109,22 +121,26 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="378" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800/1280.129.1280.720@0.0.1280.800" timestamp="1615454204596" />
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1615458213104">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1398" height="215" key="GridCell.Tab.0.bottom" timestamp="1617245670040">
+      <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800/1280.129.1280.720@0.0.1280.800" timestamp="1615458213104" />
-    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1615458213102">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1398" height="215" key="GridCell.Tab.0.bottom/0.23.1440.832@0.23.1440.832" timestamp="1617245670040" />
+    <state width="1398" height="215" key="GridCell.Tab.0.center" timestamp="1617245670039">
+      <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800/1280.129.1280.720@0.0.1280.800" timestamp="1615458213102" />
-    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1615458213101">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1398" height="215" key="GridCell.Tab.0.center/0.23.1440.832@0.23.1440.832" timestamp="1617245670039" />
+    <state width="1398" height="215" key="GridCell.Tab.0.left" timestamp="1617245670038">
+      <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800/1280.129.1280.720@0.0.1280.800" timestamp="1615458213101" />
-    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1615458213103">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1398" height="215" key="GridCell.Tab.0.left/0.23.1440.832@0.23.1440.832" timestamp="1617245670038" />
+    <state width="1398" height="215" key="GridCell.Tab.0.right" timestamp="1617245670040">
+      <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800/1280.129.1280.720@0.0.1280.800" timestamp="1615458213103" />
+    <state width="1398" height="215" key="GridCell.Tab.0.right/0.23.1440.832@0.23.1440.832" timestamp="1617245670040" />
     <state x="141" y="39" key="SettingsEditor" timestamp="1615473095996">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -134,9 +150,22 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="500" height="350" key="documentation.popup.size/0.0.1280.800/1280.129.1280.720@0.0.1280.800" timestamp="1615473175028" />
-    <state x="305" y="124" key="search.everywhere.popup" timestamp="1615430685124">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="305" y="137" width="670" height="676" key="search.everywhere.popup" timestamp="1619450604683">
+      <screen x="0" y="23" width="1280" height="732" />
     </state>
     <state x="305" y="124" key="search.everywhere.popup/0.0.1280.800/1280.129.1280.720@0.0.1280.800" timestamp="1615430685124" />
+    <state x="305" y="137" width="670" height="676" key="search.everywhere.popup/0.23.1280.732/1280.23.1360.745@0.23.1280.732" timestamp="1619450604683" />
+    <state x="305" y="137" key="search.everywhere.popup/0.23.1280.733/1280.23.1360.745@0.23.1280.733" timestamp="1616604093209" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/handler/user.go</url>
+          <line>2</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
