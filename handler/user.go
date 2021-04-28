@@ -86,9 +86,28 @@ func SignInHandler(w http.ResponseWriter,r *http.Request){
 }
 func UserInfoHandler(w http.ResponseWriter,r *http.Request){
 	//1.解析请求参数
+	r.ParseForm()
+	username:=r.Form.Get("username")
+	token:=r.Form.Get("token")
 	//2.验证token是否有效
+	isVaildToken:=IsTokenVaild(token)
+	if !isVaildToken{
+		w.WriteHeader(http.StatusForbidden)
+		return
+	}
 	//3.查询用户信息
+	user,err:=dblayer.GetUserInfo(username)
+	if err!=nil{
+		w.WriteHeader(http.StatusForbidden)
+		return
+	}
 	//4.组装并且响应用户数据
+	resp:=util.RespMsg{
+		Code: 0,
+		Msg: "OK",
+		Data:user,
+	}
+	w.Write(resp.JSONBytes())
 }
 
 func IsTokenVaild(token string)bool{
