@@ -10,6 +10,8 @@ import (
 	"net/http"
 	"os"
 	"time"
+
+     dbplayer "filestore-server/db"
 )
 
 func UploadHandler(w http.ResponseWriter,r *http.Request){
@@ -51,7 +53,15 @@ func UploadHandler(w http.ResponseWriter,r *http.Request){
             fileMeta.FileSha1=util.FileSha1(newFile)
             //meta.UpdateFileMeta(fileMeta)
             _=meta.UpdateFileMetaDb(fileMeta)
-			http.Redirect(w,r,"/file/upload/suc",http.StatusFound)
+            //更新用户表文件表记录
+            r.ParseForm()
+            username:=r.Form.Get("username")
+            suc:=dbplayer.OnUserFileUploadFinished(username,fileMeta.FileSha1,fileMeta.FileName,fileMeta.FileSize)
+            if suc{
+				http.Redirect(w,r,"/file/upload/suc",http.StatusFound)
+			}else{
+				w.Write([]byte("上传失败"))
+			}
 		}
 }
 //上传已完成

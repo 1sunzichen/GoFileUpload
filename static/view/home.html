@@ -72,8 +72,13 @@
   window.onload = function () {
     var username = document.getElementById('username');
     $.ajax({
-      url: "/user/info?" + queryParams(),
+      // url: "/user/info?" + queryParams(),
+      url: "/user/info",
       type: "POST",
+      data:{
+        username:localStorage.getItem("username"),
+        token:localStorage.getItem("token")
+      },
       error: function (err) {
         alert(JSON.stringify(err));
       },

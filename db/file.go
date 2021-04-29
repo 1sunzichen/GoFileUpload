@@ -1,7 +1,7 @@
 package db
 import (
 	"database/sql"
-	mydb "gitfilestore-server/db/mysql"
+	mydb "filestore-server/db/mysql"
 	"fmt"
 )
 //文件上传 接口
@@ -23,7 +23,7 @@ func OnFileUploadFinished(filehash string,filename string,filesize int64,fileadd
 	}
 	if rf,err:=ret.RowsAffected();nil==err{
 		if rf<=0{
-			fmt.Printf("File with hash%s hash been upload before",filehash)
+			fmt.Printf("文件hash%s以前上传过",filehash)
 		}
 		return true
 	}

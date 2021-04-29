@@ -80,14 +80,14 @@
       success: function (body) {
         console.log(body,'true',JSON.parse(body).msg)
 
-         window.location.href=JSON.parse(body)["msg"]
-        // localStorage.setItem("token", body.data.Token)
-        // localStorage.setItem("username", body.data.Username)
-        // // 增加上传入口ip:port
+         // window.location.href=JSON.parse(body)["msg"]
+        localStorage.setItem("token", JSON.parse(body).data.Token)
+        localStorage.setItem("username", JSON.parse(body).data.Username)
+        // 增加上传入口ip:port
         // localStorage.setItem("uploadEntry", body.data.UploadEntry);
-        // // 增加下载入口ip:port
+        // 增加下载入口ip:port
         // localStorage.setItem("downloadEntry", body.data.DownloadEntry);
-        // window.location.href = body.data.Location;
+         window.location.href = JSON.parse(body).data.Location;
       }
     });
   }
