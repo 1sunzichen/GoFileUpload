@@ -1,7 +1,7 @@
 package db
 import (
 	"database/sql"
-	mydb "filestore-server/db/mysql"
+	mydb "gitfilestore-server/db/mysql"
 	"fmt"
 )
 //文件上传 接口

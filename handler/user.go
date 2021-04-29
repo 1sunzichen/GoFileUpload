@@ -85,6 +85,7 @@ func SignInHandler(w http.ResponseWriter,r *http.Request){
 		w.Write(resp.JSONBytes())
 }
 func UserInfoHandler(w http.ResponseWriter,r *http.Request){
+
 	//1.解析请求参数
 	//2.验证token是否有效
 	//3.查询用户信息
