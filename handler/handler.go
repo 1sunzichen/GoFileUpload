@@ -9,6 +9,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+	"strconv"
 	"time"
 
      dbplayer "filestore-server/db"
@@ -58,7 +59,21 @@ func UploadHandler(w http.ResponseWriter,r *http.Request){
             username:=r.Form.Get("username")
             suc:=dbplayer.OnUserFileUploadFinished(username,fileMeta.FileSha1,fileMeta.FileName,fileMeta.FileSize)
             if suc{
-				http.Redirect(w,r,"/file/upload/suc",http.StatusFound)
+				resp:=util.RespMsg{
+					Code:0,
+					Msg:"ok",
+					Data:struct{
+						Location string
+						Username string
+						//Token string
+					}{
+						Location:"http://"+r.Host+"/static/view/home.html",
+						Username:username,
+						//Token:token,
+					},
+				}
+				w.Write(resp.JSONBytes())
+				//http.Redirect(w,r,"/file/upload/suc",http.StatusFound)
 			}else{
 				w.Write([]byte("上传失败"))
 			}
@@ -88,7 +103,31 @@ func GetFileMetaHandler(w http.ResponseWriter,r *http.Request){
 	}
 	w.Write(d)
 }
+//批量获取文件元信息
+func FileQueryHandler(w http.ResponseWriter,r *http.Request){
+	//ParseForm解析URL中的查询字符串，并将解析结果更新到r.Form字段。
+	//对于POST或PUT请求，ParseForm还会将body当作表单解析，并将结果既更新到r.PostForm也更新到r.Form。
+	//解析结果中，POST或PUT请求主体要优先于URL查询字符串（同名变量，主体的值在查询字符串的值前面）。
+	r.ParseForm()
+	//字符串转数组
+	limitCnt,_:=strconv.Atoi(r.Form.Get("limit"))
+	username:=r.Form.Get("username");
+	fmt.Println(limitCnt,username)
 
+	fileMetas,err:=dbplayer.QueryUserFileMatas(username,limitCnt)
+	if err!=nil{
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+	data,err:=json.Marshal(fileMetas);
+
+	if err!=nil{
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+
+	w.Write(data)
+}
 
 func DownloadHandler(w http.ResponseWriter,r *http.Request){
 	r.ParseForm()
@@ -146,4 +185,54 @@ func FileDeleteHandler(w http.ResponseWriter,r *http.Request){
 	meta.RemoveFileMeta(filesha1)
 
 	w.WriteHeader(http.StatusOK)
+}
+//
+func TryFastUploadHandler(w http.ResponseWriter,r *http.Request){
+	r.ParseForm()
+	//
+	username:=r.Form.Get("username")
+	filehash:=r.Form.Get("filehash")
+	filename:=r.Form.Get("filename")
+	//filesize:=r.Form.Get("filesize")
+	filesize,_:=strconv.ParseInt(r.Form.Get("filesize"),10,64)
+	//
+	fileMeta,err:=meta.GetFileMetaDB(filehash)
+	if err!=nil{
+		fmt.Println(err.Error())
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+   fileMetaStatus,_:=json.Marshal(fileMeta)
+	if string(fileMetaStatus) == "{}"{
+		resp:=util.RespMsg{
+			Code:-1,
+			Msg: "秒传失败,请访问普通上传接口",
+
+
+		}
+		w.Write(resp.JSONBytes())
+		return
+	}
+
+	suc:=dbplayer.OnUserFileUploadFinished(username,filehash,filename,filesize)
+
+
+    if suc{
+    	resp:=util.RespMsg{
+    		Code: 0,
+    		Msg: "秒传成功",
+
+
+		}
+		w.Write(resp.JSONBytes())
+	}else{
+		resp:=util.RespMsg{
+			Code: -2,
+			Msg: "秒传失败",
+
+
+		}
+		w.Write(resp.JSONBytes())
+	}
+
 }

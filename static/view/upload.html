@@ -58,7 +58,7 @@
   function onUpload() {
     // window.onload=function (){
 
-    var upUrl = "/file/upload"
+    var upUrl = "/file/upload?username="+localStorage.getItem("username")
     //         + queryParams();
     // var upEntry = localStorage.getItem("uploadEntry");
     // if (upEntry != "" ) {
@@ -68,7 +68,8 @@
     //     upUrl = "http://" + upEntry + "/file/upload?" + queryParams();
     //   }
     // }
-
+    console.log($('#upForm')[0])
+    // let formData=new FormData($('#upForm')[0]).append("username",localStorage.getItem("username"))
     $.ajax({
       url: upUrl,
       type: 'POST',
@@ -81,7 +82,8 @@
       },
       success: function (res) {
         alert('请求返回结果: ' + JSON.stringify(res));
-        if (res.code == 0) {
+        console.log(res,'res')
+        if (JSON.parse(res).code == 0) {
           window.location.href = "/static/view/home.html";
         }
       }
