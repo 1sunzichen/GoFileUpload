@@ -1,0 +1,393 @@
+log.js:24 [HMR] Waiting for update signal from WDS...
+react-dom.development.js:24994 Download the React DevTools for a better development experience: https://fb.me/react-devtools
+electron/js2c/renderer_init.js:135 Electron Security Warning (Disabled webSecurity) This renderer process has "webSecurity" disabled. This
+  exposes users of this app to severe security risks.
+
+For more information and help, consult
+https://electronjs.org/docs/tutorial/security.
+This warning will not show up
+once the app is packaged.
+warnAboutDisabledWebSecurity @ electron/js2c/renderer_init.js:135
+logSecurityWarnings @ electron/js2c/renderer_init.js:135
+(anonymous) @ electron/js2c/renderer_init.js:135
+async function (async)
+(anonymous) @ electron/js2c/renderer_init.js:135
+electron/js2c/renderer_init.js:135 Electron Security Warning (allowRunningInsecureContent) This renderer process has "allowRunningInsecureContent"
+  enabled. This exposes users of this app to severe security risks.
+
+  
+For more information and help, consult
+https://electronjs.org/docs/tutorial/security.
+This warning will not show up
+once the app is packaged.
+warnAboutInsecureContentAllowed @ electron/js2c/renderer_init.js:135
+logSecurityWarnings @ electron/js2c/renderer_init.js:135
+(anonymous) @ electron/js2c/renderer_init.js:135
+async function (async)
+(anonymous) @ electron/js2c/renderer_init.js:135
+electron/js2c/renderer_init.js:15 (electron) Security Warning: webFrame.executeJavaScript was called without worldSafeExecuteJavaScript enabled. This is considered unsafe. worldSafeExecuteJavaScript will be enabled by default in Electron 12.
+log @ electron/js2c/renderer_init.js:15
+e.startsWith.WebFrame.<computed> @ electron/js2c/renderer_init.js:87
+isUnsafeEvalEnabled @ electron/js2c/renderer_init.js:135
+warnAboutInsecureCSP @ electron/js2c/renderer_init.js:135
+logSecurityWarnings @ electron/js2c/renderer_init.js:135
+(anonymous) @ electron/js2c/renderer_init.js:135
+async function (async)
+(anonymous) @ electron/js2c/renderer_init.js:135
+electron/js2c/renderer_init.js:135 Electron Security Warning (Insecure Content-Security-Policy) This renderer process has either no Content Security
+    Policy set or a policy with "unsafe-eval" enabled. This exposes users of
+    this app to unnecessary security risks.
+
+For more information and help, consult
+https://electronjs.org/docs/tutorial/security.
+This warning will not show up
+once the app is packaged.
+(anonymous) @ electron/js2c/renderer_init.js:135
+Promise.then (async)
+warnAboutInsecureCSP @ electron/js2c/renderer_init.js:135
+logSecurityWarnings @ electron/js2c/renderer_init.js:135
+(anonymous) @ electron/js2c/renderer_init.js:135
+async function (async)
+(anonymous) @ electron/js2c/renderer_init.js:135
+App.tsx:178 app render
+App.tsx:178 app render
+App.tsx:178 app render
+App.tsx:178 app render
+App.tsx:151 initDb
+App.tsx:178 app render
+App.tsx:178 app render
+bar.tsx:528 Bar Store {…}
+bar.tsx:528 Bar Store {…}
+index.js:1 Warning: Legacy context API has been detected within a strict-mode tree.
+
+The old API will be supported in all 16.x releases, but applications using it should migrate to the new version.
+
+Please update the following components: t
+
+Learn more about this warning here: https://fb.me/react-legacy-context
+    in t (at Calendar/index.tsx:83)
+    in div (at Calendar/index.tsx:82)
+    in Calendar (at WellForm.tsx:265)
+    in div (at WellForm.tsx:259)
+    in div (at WellForm.tsx:258)
+    in div (at WellForm.tsx:191)
+    in div (at Dialog/index.tsx:193)
+    in div (at Dialog/index.tsx:172)
+    in div (at Dialog/index.tsx:170)
+    in Dialog (at WellForm.tsx:184)
+    in WellForm (at createWell/index.tsx:103)
+    in wrappedComponent (at main/index.tsx:72)
+    in div (at main/index.tsx:52)
+    in PlatformMain (at deeproPlatform/index.tsx:203)
+    in MobXProvider (at deeproPlatform/index.tsx:202)
+    in div (at App.tsx:181)
+    in App (created by Context.Consumer)
+    in Route (at router.tsx:8)
+    in Router (created by HashRouter)
+    in HashRouter (at router.tsx:7)
+    in AppRouter (at src/index.tsx:22)
+    in StrictMode (at src/index.tsx:21)
+console.<computed> @ main.js:297817
+printWarning @ main.js:272836
+error @ main.js:272808
+(anonymous) @ main.js:284180
+./node_modules/react-dom/cjs/react-dom.development.js.ReactStrictModeWarnings.flushLegacyContextWarning @ main.js:284166
+flushRenderPhaseStrictModeWarningsInDEV @ main.js:295857
+commitRootImpl @ main.js:295144
+unstable_runWithPriority @ main.js:306160
+runWithPriority$1 @ main.js:283787
+commitRoot @ main.js:295129
+finishSyncRender @ main.js:294555
+performSyncWorkOnRoot @ main.js:294541
+(anonymous) @ main.js:283837
+unstable_runWithPriority @ main.js:306160
+runWithPriority$1 @ main.js:283787
+flushSyncCallbackQueueImpl @ main.js:283832
+flushSyncCallbackQueue @ main.js:283820
+scheduleUpdateOnFiber @ main.js:293947
+dispatchAction @ main.js:288408
+(anonymous) @ main.js:364253
+Promise.then (async)
+(anonymous) @ main.js:364251
+commitHookEffectListMount @ main.js:292479
+commitPassiveHookEffects @ main.js:292517
+callCallback @ main.js:272936
+invokeGuardedCallbackDev @ main.js:272985
+invokeGuardedCallback @ main.js:273040
+flushPassiveEffectsImpl @ main.js:295601
+unstable_runWithPriority @ main.js:306160
+runWithPriority$1 @ main.js:283787
+flushPassiveEffects @ main.js:295568
+(anonymous) @ main.js:295447
+workLoop @ main.js:306104
+flushWork @ main.js:306059
+performWorkUntilDeadline @ main.js:305671
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+index.tsx:698 false "showFileManagerDialog"
+index.tsx:699 false "store.isWellOpen===="
+toolBar2.tsx:134 currentDashboardRef.isCanBackHistory== true
+toolBar2.tsx:135 currentDashboardRef.isCanForwardHistory== true
+toolBar2.tsx:94 999
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+bar.tsx:210 1 [] "dashboardRefs=================="
+bar.tsx:215 Proxy {Symbol(mobx administration): ObservableArrayAdministration} 2222
+bar.tsx:210 1 [] "dashboardRefs=================="
+bar.tsx:215 Proxy {Symbol(mobx administration): ObservableArrayAdministration} 2222
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+toolBar1.tsx:259 (3) [{…}, {…}, {…}] "result---------------------"
+store.tsx:165 (3) [{…}, {…}, {…}] "newLocalTree-----------"
+App.tsx:174 []
+17:42:18.797 › null connection========================
+17:42:18.802 › {page: 0, size: 0, createTimeStart: "", createTimeEnd: "", updateTimeStart: "", …} params
+17:42:18.804 › 15 per_page
+17:42:18.805 › 0 per_skip
+topMenu.tsx:553 hideAll==topMenu==hasOpened= false
+index.js:124200 echart worker init
+index.js:124200 echart worker init
+index.js:124200 echart worker init
+index.js:124200 echart worker init
+index.js:124200 echart worker init
+index.js:124200 echart worker init
+index.js:124200 echart worker init
+Navigated to http://localhost:3000/
+log.js:24 [HMR] Waiting for update signal from WDS...
+react-dom.development.js:24994 Download the React DevTools for a better development experience: https://fb.me/react-devtools
+electron/js2c/renderer_init.js:135 Electron Security Warning (Disabled webSecurity) This renderer process has "webSecurity" disabled. This
+  exposes users of this app to severe security risks.
+
+For more information and help, consult
+https://electronjs.org/docs/tutorial/security.
+This warning will not show up
+once the app is packaged.
+warnAboutDisabledWebSecurity @ electron/js2c/renderer_init.js:135
+logSecurityWarnings @ electron/js2c/renderer_init.js:135
+(anonymous) @ electron/js2c/renderer_init.js:135
+async function (async)
+(anonymous) @ electron/js2c/renderer_init.js:135
+load (async)
+securityWarnings @ electron/js2c/renderer_init.js:135
+(anonymous) @ electron/js2c/renderer_init.js:115
+./lib/renderer/init.ts @ electron/js2c/renderer_init.js:115
+__webpack_require__ @ electron/js2c/renderer_init.js:3
+(anonymous) @ electron/js2c/renderer_init.js:3
+___electron_webpack_init__ @ electron/js2c/renderer_init.js:3
+(anonymous) @ electron/js2c/renderer_init.js:204
+NativeModule.compile @ internal/bootstrap/loaders.js:287
+NativeModule.compileForPublicLoader @ internal/bootstrap/loaders.js:222
+loadNativeModule @ internal/modules/cjs/helpers.js:23
+Module._load @ internal/modules/cjs/loader.js:698
+Module._load @ electron/js2c/asar.js:769
+Module.runMain @ internal/modules/cjs/loader.js:1056
+(anonymous) @ internal/main/run_main_module.js:17
+electron/js2c/renderer_init.js:135 Electron Security Warning (allowRunningInsecureContent) This renderer process has "allowRunningInsecureContent"
+  enabled. This exposes users of this app to severe security risks.
+
+  
+For more information and help, consult
+https://electronjs.org/docs/tutorial/security.
+This warning will not show up
+once the app is packaged.
+warnAboutInsecureContentAllowed @ electron/js2c/renderer_init.js:135
+logSecurityWarnings @ electron/js2c/renderer_init.js:135
+(anonymous) @ electron/js2c/renderer_init.js:135
+async function (async)
+(anonymous) @ electron/js2c/renderer_init.js:135
+load (async)
+securityWarnings @ electron/js2c/renderer_init.js:135
+(anonymous) @ electron/js2c/renderer_init.js:115
+./lib/renderer/init.ts @ electron/js2c/renderer_init.js:115
+__webpack_require__ @ electron/js2c/renderer_init.js:3
+(anonymous) @ electron/js2c/renderer_init.js:3
+___electron_webpack_init__ @ electron/js2c/renderer_init.js:3
+(anonymous) @ electron/js2c/renderer_init.js:204
+NativeModule.compile @ internal/bootstrap/loaders.js:287
+NativeModule.compileForPublicLoader @ internal/bootstrap/loaders.js:222
+loadNativeModule @ internal/modules/cjs/helpers.js:23
+Module._load @ internal/modules/cjs/loader.js:698
+Module._load @ electron/js2c/asar.js:769
+Module.runMain @ internal/modules/cjs/loader.js:1056
+(anonymous) @ internal/main/run_main_module.js:17
+electron/js2c/renderer_init.js:15 (electron) Security Warning: webFrame.executeJavaScript was called without worldSafeExecuteJavaScript enabled. This is considered unsafe. worldSafeExecuteJavaScript will be enabled by default in Electron 12.
+log @ electron/js2c/renderer_init.js:15
+e.startsWith.WebFrame.<computed> @ electron/js2c/renderer_init.js:87
+isUnsafeEvalEnabled @ electron/js2c/renderer_init.js:135
+warnAboutInsecureCSP @ electron/js2c/renderer_init.js:135
+logSecurityWarnings @ electron/js2c/renderer_init.js:135
+(anonymous) @ electron/js2c/renderer_init.js:135
+async function (async)
+(anonymous) @ electron/js2c/renderer_init.js:135
+load (async)
+securityWarnings @ electron/js2c/renderer_init.js:135
+(anonymous) @ electron/js2c/renderer_init.js:115
+./lib/renderer/init.ts @ electron/js2c/renderer_init.js:115
+__webpack_require__ @ electron/js2c/renderer_init.js:3
+(anonymous) @ electron/js2c/renderer_init.js:3
+___electron_webpack_init__ @ electron/js2c/renderer_init.js:3
+(anonymous) @ electron/js2c/renderer_init.js:204
+NativeModule.compile @ internal/bootstrap/loaders.js:287
+NativeModule.compileForPublicLoader @ internal/bootstrap/loaders.js:222
+loadNativeModule @ internal/modules/cjs/helpers.js:23
+Module._load @ internal/modules/cjs/loader.js:698
+Module._load @ electron/js2c/asar.js:769
+Module.runMain @ internal/modules/cjs/loader.js:1056
+(anonymous) @ internal/main/run_main_module.js:17
+electron/js2c/renderer_init.js:135 Electron Security Warning (Insecure Content-Security-Policy) This renderer process has either no Content Security
+    Policy set or a policy with "unsafe-eval" enabled. This exposes users of
+    this app to unnecessary security risks.
+
+For more information and help, consult
+https://electronjs.org/docs/tutorial/security.
+This warning will not show up
+once the app is packaged.
+(anonymous) @ electron/js2c/renderer_init.js:135
+Promise.then (async)
+warnAboutInsecureCSP @ electron/js2c/renderer_init.js:135
+logSecurityWarnings @ electron/js2c/renderer_init.js:135
+(anonymous) @ electron/js2c/renderer_init.js:135
+async function (async)
+(anonymous) @ electron/js2c/renderer_init.js:135
+load (async)
+securityWarnings @ electron/js2c/renderer_init.js:135
+(anonymous) @ electron/js2c/renderer_init.js:115
+./lib/renderer/init.ts @ electron/js2c/renderer_init.js:115
+__webpack_require__ @ electron/js2c/renderer_init.js:3
+(anonymous) @ electron/js2c/renderer_init.js:3
+___electron_webpack_init__ @ electron/js2c/renderer_init.js:3
+(anonymous) @ electron/js2c/renderer_init.js:204
+NativeModule.compile @ internal/bootstrap/loaders.js:287
+NativeModule.compileForPublicLoader @ internal/bootstrap/loaders.js:222
+loadNativeModule @ internal/modules/cjs/helpers.js:23
+Module._load @ internal/modules/cjs/loader.js:698
+Module._load @ electron/js2c/asar.js:769
+Module.runMain @ internal/modules/cjs/loader.js:1056
+(anonymous) @ internal/main/run_main_module.js:17
+App.tsx:178 app render
+App.tsx:178 app render
+App.tsx:178 app render
+App.tsx:178 app render
+App.tsx:151 initDb
+App.tsx:178 app render
+App.tsx:178 app render
+bar.tsx:528 Bar Store {…}
+bar.tsx:528 Bar Store {…}
+index.js:1 Warning: Legacy context API has been detected within a strict-mode tree.
+
+The old API will be supported in all 16.x releases, but applications using it should migrate to the new version.
+
+Please update the following components: t
+
+Learn more about this warning here: https://fb.me/react-legacy-context
+    in t (at Calendar/index.tsx:83)
+    in div (at Calendar/index.tsx:82)
+    in Calendar (at WellForm.tsx:265)
+    in div (at WellForm.tsx:259)
+    in div (at WellForm.tsx:258)
+    in div (at WellForm.tsx:191)
+    in div (at Dialog/index.tsx:193)
+    in div (at Dialog/index.tsx:172)
+    in div (at Dialog/index.tsx:170)
+    in Dialog (at WellForm.tsx:184)
+    in WellForm (at createWell/index.tsx:103)
+    in wrappedComponent (at main/index.tsx:72)
+    in div (at main/index.tsx:52)
+    in PlatformMain (at deeproPlatform/index.tsx:203)
+    in MobXProvider (at deeproPlatform/index.tsx:202)
+    in div (at App.tsx:181)
+    in App (created by Context.Consumer)
+    in Route (at router.tsx:8)
+    in Router (created by HashRouter)
+    in HashRouter (at router.tsx:7)
+    in AppRouter (at src/index.tsx:22)
+    in StrictMode (at src/index.tsx:21)
+console.<computed> @ index.js:1
+printWarning @ react-dom.development.js:88
+error @ react-dom.development.js:60
+(anonymous) @ react-dom.development.js:11432
+./node_modules/react-dom/cjs/react-dom.development.js.ReactStrictModeWarnings.flushLegacyContextWarning @ react-dom.development.js:11418
+flushRenderPhaseStrictModeWarningsInDEV @ react-dom.development.js:23109
+commitRootImpl @ react-dom.development.js:22396
+unstable_runWithPriority @ scheduler.development.js:653
+runWithPriority$1 @ react-dom.development.js:11039
+commitRoot @ react-dom.development.js:22381
+finishSyncRender @ react-dom.development.js:21807
+performSyncWorkOnRoot @ react-dom.development.js:21793
+(anonymous) @ react-dom.development.js:11089
+unstable_runWithPriority @ scheduler.development.js:653
+runWithPriority$1 @ react-dom.development.js:11039
+flushSyncCallbackQueueImpl @ react-dom.development.js:11084
+flushSyncCallbackQueue @ react-dom.development.js:11072
+scheduleUpdateOnFiber @ react-dom.development.js:21199
+dispatchAction @ react-dom.development.js:15660
+(anonymous) @ App.tsx:152
+Promise.then (async)
+(anonymous) @ App.tsx:150
+commitHookEffectListMount @ react-dom.development.js:19731
+commitPassiveHookEffects @ react-dom.development.js:19769
+callCallback @ react-dom.development.js:188
+invokeGuardedCallbackDev @ react-dom.development.js:237
+invokeGuardedCallback @ react-dom.development.js:292
+flushPassiveEffectsImpl @ react-dom.development.js:22853
+unstable_runWithPriority @ scheduler.development.js:653
+runWithPriority$1 @ react-dom.development.js:11039
+flushPassiveEffects @ react-dom.development.js:22820
+(anonymous) @ react-dom.development.js:22699
+workLoop @ scheduler.development.js:597
+flushWork @ scheduler.development.js:552
+performWorkUntilDeadline @ scheduler.development.js:164
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+index.tsx:698 false "showFileManagerDialog"
+index.tsx:699 false "store.isWellOpen===="
+toolBar2.tsx:134 currentDashboardRef.isCanBackHistory== true
+toolBar2.tsx:135 currentDashboardRef.isCanForwardHistory== true
+toolBar2.tsx:94 999
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+bar.tsx:210 1 [] "dashboardRefs=================="
+bar.tsx:215 Proxy {Symbol(mobx administration): ObservableArrayAdministration} 2222
+bar.tsx:210 1 [] "dashboardRefs=================="
+bar.tsx:215 Proxy {Symbol(mobx administration): ObservableArrayAdministration} 2222
+tableBody.tsx:341 body
+tableBody.tsx:341 body
+toolBar1.tsx:259 (3) [{…}, {…}, {…}] "result---------------------"
+store.tsx:165 (3) [{…}, {…}, {…}] "newLocalTree-----------"
+App.tsx:174 []
+topMenu.tsx:553 hideAll==topMenu==hasOpened= false
+index.ts:97 echart worker init
+index.ts:97 echart worker init
+index.ts:97 echart worker init
+index.ts:97 echart worker init
+index.ts:97 echart worker init
+index.ts:97 echart worker init
+index.ts:97 echart worker init
+topMenu.tsx:553 hideAll==topMenu==hasOpened= false
+localTree.tsx:121 (16) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}] "[{"area":[{"id":2,"name":"321"}],"value":{"id":"2-17","created_time":"2021-03-24T12:02:05.000Z","updated_time":"2021-03-24T12:02:05.000Z","versionName":"","versionCode":0,"uuid":"c062a520-8c98-11eb-9bca-c59a8adf48a3","fileMode":0,"continuousDataHeaders":"","discreteDataHeaders":"","createdBy":"","updatedBy":"","name":"SN1057","type":"","x":15476855,"y":5062880,"elevation":356.3,"height":27,"completeDepth":3605,"startDate":"2006-03-07","drilledDate":"2007-03-09","completeDate":"2007-03-09","description":"","text":"321-SN1057"}},{"area":[{"id":2,"name":"321"}],"value":{"id":"2-18","created_time":"2021-03-24T12:02:05.000Z","updated_time":"2021-03-24T12:02:05.000Z","versionName":"","versionCode":0,"uuid":"c062cc30-8c98-11eb-9bca-c59a8adf48a3","fileMode":0,"continuousDataHeaders":"","discreteDataHeaders":"","createdBy":"","updatedBy":"","name":"SN1071","type":"","x":15476297.4,"y":5063425.3,"elevation":346.4,"height":29.3,"completeDepth":3504,"startDate":"2008-09-01","drilledDate":"2009-03-04","completeDate":"2009-03-04","description":"","text":"321-SN1071"}},{"area":[{"id":2,"name":"321"}],"value":{"id":"2-19","created_time":"2021-03-24T12:02:05.000Z","updated_time":"2021-03-24T12:02:05.000Z","versionName":"","versionCode":0,"uuid":"c0631a50-8c98-11eb-9bca-c59a8adf48a3","fileMode":0,"continuousDataHeaders":"","discreteDataHeaders":"","createdBy":"","updatedBy":"","name":"SN1087","type":"","x":15476731.7,"y":5063644,"elevation":353.7,"height":23,"completeDepth":3650,"startDate":"2008-09-01","drilledDate":"2009-03-04","completeDate":"2009-03-04","description":"","text":"321-SN1087"}},{"area":[{"id":2,"name":"321"}],"value":{"id":"2-20","created_time":"2021-03-24T12:02:05.000Z","updated_time":"2021-03-24T12:02:05.000Z","versionName":"","versionCode":0,"uuid":"c0631a51-8c98-11eb-9bca-c59a8adf48a3","fileMode":0,"continuousDataHeaders":"","discreteDataHeaders":"","createdBy":"","updatedBy":"","name":"SN1089","type":"","x":15477395.4,"y":5063431.4,"elevation":368,"height":23.2,"completeDepth":3840,"startDate":"2001-03-06","drilledDate":"2002-03-02","completeDate":"2002-03-02","description":"","text":"321-SN1089"}},{"area":[{"id":2,"name":"321"}],"value":{"id":"2-21","created_time":"2021-03-24T12:02:05.000Z","updated_time":"2021-03-24T12:02:05.000Z","versionName":"","versionCode":0,"uuid":"c0631a52-8c98-11eb-9bca-c59a8adf48a3","fileMode":0,"continuousDataHeaders":"","discreteDataHeaders":"","createdBy":"","updatedBy":"","name":"SN1072","type":"","x":15476630,"y":5063314.9,"elevation":349.1,"height":26.2,"completeDepth":3620,"startDate":"2007-03-04","drilledDate":"2008-06-05","completeDate":"2008-06-05","description":"","text":"321-SN1072"}},{"area":[{"id":2,"name":"321"}],"value":{"id":"2-22","created_time":"2021-03-24T12:02:05.000Z","updated_time":"2021-03-24T12:02:05.000Z","versionName":"","versionCode":0,"uuid":"c0634160-8c98-11eb-9bca-c59a8adf48a3","fileMode":0,"continuousDataHeaders":"","discreteDataHeaders":"","createdBy":"","updatedBy":"","name":"SN1102","type":"","x":15476835.6,"y":5063975,"elevation":348.7,"height":21,"completeDepth":3125,"startDate":"2008-09-01","drilledDate":"2009-03-04","completeDate":"2009-03-04","description":"","text":"321-SN1102"}},{"area":[{"id":2,"name":"321"}],"value":{"id":"2-23","created_time":"2021-03-24T12:02:05.000Z","updated_time":"2021-03-24T12:02:05.000Z","versionName":"","versionCode":0,"uuid":"c0636870-8c98-11eb-9bca-c59a8adf48a3","fileMode":0,"continuousDataHeaders":"","discreteDataHeaders":"","createdBy":"","updatedBy":"","name":"SN1103","type":"","x":15477166,"y":5063870,"elevation":360,"height":23,"completeDepth":3784,"startDate":"2007-03-04","drilledDate":"2008-06-05","completeDate":"2008-06-05","description":"","text":"321-SN1103"}},{"area":[{"id":2,"name":"321"}],"value":{"id":"2-24","created_time":"2021-03-24T12:02:05.000Z","updated_time":"2021-03-24T12:02:05.000Z","versionName":"","versionCode":0,"uuid":"c0636871-8c98-11eb-9bca-c59a8adf48a3","fileMode":0,"continuousDataHeaders":"","discreteDataHeaders":"","createdBy":"","updatedBy":"","name":"SN1104","type":"","x":15477499.8,"y":5063765.4,"elevation":356.1,"height":25,"completeDepth":3164,"startDate":"2001-03-06","drilledDate":"2002-03-02","completeDate":"2002-03-02","description":"","text":"321-SN1104"}},{"area":[{"id":2,"name":"321"}],"value":{"id":"2-25","created_time":"2021-03-24T12:02:05.000Z","updated_time":"2021-03-24T12:02:05.000Z","versionName":"","versionCode":0,"uuid":"c063b690-8c98-11eb-9bca-c59a8adf48a3","fileMode":0,"continuousDataHeaders":"","discreteDataHeaders":"","createdBy":"","updatedBy":"","name":"SN1666","type":"","x":15475159.03,"y":5063895.47,"elevation":385.68,"height":29,"completeDepth":3842,"startDate":"2008-09-01","drilledDate":"2009-03-04","completeDate":"2009-03-04","description":"","text":"321-SN1666"}},{"area":[{"id":2,"name":"321"}],"value":{"id":"2-26","created_time":"2021-03-24T12:02:05.000Z","updated_time":"2021-03-24T12:02:05.000Z","versionName":"","versionCode":0,"uuid":"c063b691-8c98-11eb-9bca-c59a8adf48a3","fileMode":0,"continuousDataHeaders":"","discreteDataHeaders":"","createdBy":"","updatedBy":"","name":"SN1679","type":"","x":15475600.48,"y":5063248.82,"elevation":363.05,"height":26,"completeDepth":3065,"startDate":"2007-03-04","drilledDate":"2008-06-05","completeDate":"2008-06-05","description":"","text":"321-SN1679"}},{"area":[{"id":2,"name":"321"}],"value":{"id":"2-27","created_time":"2021-03-24T12:02:05.000Z","updated_time":"2021-03-24T12:02:05.000Z","versionName":"","versionCode":0,"uuid":"c062f340-8c98-11eb-9bca-c59a8adf48a3","fileMode":0,"continuousDataHeaders":"","discreteDataHeaders":"","createdBy":"","updatedBy":"","name":"SN1090","type":"","x":15477731,"y":5063325.6,"elevation":352.4,"height":26.1,"completeDepth":3615,"startDate":"2006-03-07","drilledDate":"2007-03-09","completeDate":"2007-03-09","description":"","text":"321-SN1090"}},{"area":[{"id":2,"name":"321"}],"value":{"id":"2-28","created_time":"2021-03-24T12:02:05.000Z","updated_time":"2021-03-24T12:02:05.000Z","versionName":"","versionCode":0,"uuid":"c061bac0-8c98-11eb-9bca-c59a8adf48a3","fileMode":0,"continuousDataHeaders":"","discreteDataHeaders":"","createdBy":"","updatedBy":"","name":"SN1056","type":"","x":15476520,"y":5062985,"elevation":349.8,"height":25,"completeDepth":3007,"startDate":"2001-03-06","drilledDate":"2002-03-02","completeDate":"2002-03-02","description":"","text":"321-SN1056"}},{"area":[{"id":2,"name":"321"}],"value":{"id":"2-29","created_time":"2021-03-24T12:02:05.000Z","updated_time":"2021-03-24T12:02:05.000Z","versionName":"","versionCode":0,"uuid":"c065b260-8c98-11eb-9bca-c59a8adf48a3","fileMode":0,"continuousDataHeaders":"","discreteDataHeaders":"","createdBy":"","updatedBy":"","name":"SN1074","type":"","x":15477625,"y":5063000,"elevation":364.9,"height":25,"completeDepth":36920,"startDate":"2006-03-07","drilledDate":"2007-03-09","completeDate":"2007-03-09","description":"","text":"321-SN1074"}},{"area":[{"id":2,"name":"321"}],"value":{"id":"2-30","created_time":"2021-03-24T12:02:05.000Z","updated_time":"2021-03-24T12:02:05.000Z","versionName":"","versionCode":0,"uuid":"c0660080-8c98-11eb-9bca-c59a8adf48a3","fileMode":0,"continuousDataHeaders":"","discreteDataHeaders":"","createdBy":"","updatedBy":"","name":"SN1088","type":"","x":15477061.4,"y":5063535.2,"elevation":352.6,"height":25,"completeDepth":3510,"startDate":"2007-03-04","drilledDate":"2008-06-05","completeDate":"2008-06-05","description":"","text":"321-SN1088"}},{"area":[{"id":2,"name":"321"}],"value":{"id":"2-31","created_time":"2021-03-24T12:02:05.000Z","updated_time":"2021-03-24T12:02:05.000Z","versionName":"","versionCode":0,"uuid":"c065b261-8c98-11eb-9bca-c59a8adf48a3","fileMode":0,"continuousDataHeaders":"","discreteDataHeaders":"","createdBy":"","updatedBy":"","name":"SN1073","type":"","x":15477295.4,"y":5063110,"elevation":368.5,"height":21,"completeDepth":3510,"startDate":"2001-03-06","drilledDate":"2002-03-02","completeDate":"2002-03-02","description":"","text":"321-SN1073"}},{"area":[{"id":2,"name":"321"}],"value":{"id":"2-32","created_time":"2021-03-24T12:02:05.000Z","updated_time":"2021-03-24T12:02:05.000Z","versionName":"","versionCode":0,"uuid":"c065d970-8c98-11eb-9bca-c59a8adf48a3","fileMode":0,"continuousDataHeaders":"","discreteDataHeaders":"","createdBy":"","updatedBy":"","name":"SN1105","type":"","x":15477835,"y":5063660,"elevation":352.5,"height":24,"completeDepth":3195,"startDate":"2006-03-07","drilledDate":"2007-03-09","completeDate":"2007-03-09","description":"","text":"321-SN1105"}}]" "openWellmapReq"
+topMenu.tsx:553 hideAll==topMenu==hasOpened= false
+topMenu.tsx:553 hideAll==topMenu==hasOpened= false

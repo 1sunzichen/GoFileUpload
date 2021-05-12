@@ -72,8 +72,13 @@
   window.onload = function () {
     var username = document.getElementById('username');
     $.ajax({
-      url: "/user/info?" + queryParams(),
+      // url: "/user/info?" + queryParams(),
+      url: "/user/info",
       type: "POST",
+      data:{
+        username:localStorage.getItem("username"),
+        token:localStorage.getItem("token")
+      },
       error: function (err) {
         alert(JSON.stringify(err));
       },
@@ -96,8 +101,10 @@
     $.ajax({
       url: "/file/query?" + queryParams(),
       type: "POST",
+
       data: {
-        limit: 15
+        username:localStorage.getItem("username"),
+        limit: 1
       },
       error: function (err) {
         alert(JSON.stringify(err));
@@ -106,13 +113,13 @@
         if (!body) {
           return;
         }
-        var data = body;
+        var data = JSON.parse(body);
         if (!data || data.length <= 0) {
           return;
         }
-
+        console.log(data,'data')
         var dlHost = 'http://localhost:8080';
-        var dlEntry = localStorage.getItem('downloadEntry');
+        var dlEntry = localStorage.getItem('downloadEntry')||"";
         if (dlEntry != '') {
           if (dlEntry.indexOf('http:')<0) {
             dlHost = 'http://' + dlEntry;
@@ -135,6 +142,7 @@
         for (var i = 0; i < data.length; i++) {
           var x = document.getElementById('filetbl').insertRow();
           var cell = x.insertCell();
+          console.log(i,'i')
           cell.innerHTML = data[i].FileHash.substr(0, 20) + "...";
 
           cell = x.insertCell();
@@ -147,7 +155,7 @@
           cell.innerHTML = data[i].UploadAt;
 
           cell = x.insertCell();
-          cell.innerHTML = data[i].LastUpdated;
+          cell.innerHTML = data[i].LastUpdate;
 
           cell = x.insertCell();
           cell.innerHTML = downloadHtml.format(data[i].FileHash, queryParams()) + cdlFileHtml
@@ -160,8 +168,8 @@
   }
 
   function toUploadFile() {
-    // window.location.href = '/file/upload?' + queryParams();
-    window.location.href = "/static/view/upload.html";
+     // window.location.href = '/file/upload?' + queryParams();
+     window.location.href = "/static/view/upload.html?"+ queryParams();
   }
 
   function downloadFile(durl) {
@@ -222,6 +230,9 @@
         window.location.href = '/static/view/home.html';
       }
     });
+  }
+  function  queryParams() {
+    return `username=${localStorage.getItem("username")}&token=${localStorage.getItem("token")}`
   }
 </script>
 
