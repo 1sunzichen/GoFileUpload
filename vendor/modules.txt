@@ -1,0 +1,16 @@
+# github.com/go-sql-driver/mysql v1.6.0
+## explicit
+github.com/go-sql-driver/mysql
+# github.com/gomodule/redigo v1.8.4
+## explicit
+github.com/gomodule/redigo/redis
+# github.com/yuin/gopher-lua v0.0.0-20200816102855-ee81675732da
+## explicit
+github.com/yuin/gopher-lua
+github.com/yuin/gopher-lua/ast
+github.com/yuin/gopher-lua/parse
+github.com/yuin/gopher-lua/pm
+# gopkg.in/amz.v1 v1.0.0-20150111123259-ad23e96a31d2
+## explicit
+gopkg.in/amz.v1/aws
+gopkg.in/amz.v1/s3

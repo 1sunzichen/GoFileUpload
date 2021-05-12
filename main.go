@@ -15,6 +15,10 @@ func main(){
 	//StripPrefix返回一个处理器，该处理器会将请求的URL.Path字段中给定前缀prefix去除后再交由h处理。
 	//StripPrefix会向URL.Path字段中没有给定前缀的请求回复404 page not found。
 	http.Handle("/static/", http.StripPrefix("/static", fs))
+	//分块上传
+	http.HandleFunc("/file/mpupload/init",handler.HTTPInterceptor(handler.InitialMultipartUploadHandler))
+	http.HandleFunc("/file/mpupload/uppart",handler.HTTPInterceptor(handler.UploadPartHandler))
+	http.HandleFunc("/file/mpupload/complete",handler.HTTPInterceptor(handler.CompleteUploadHandler))
 
 	//http.Handle("/", http.FileServer(http.Dir("/static")))
 	http.HandleFunc("/file/upload",handler.UploadHandler)
