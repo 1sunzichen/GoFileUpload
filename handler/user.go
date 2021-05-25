@@ -19,7 +19,7 @@ func DoSignupHandler(c *gin.Context)  {
 	username:=c.Request.FormValue("username")
 	passwd:=c.Request.FormValue("password")
 	//存在一个之后 不在成功的问题 ，就是唯一索引值  没有插入，插入之后 就可以刷新
-	//phone:=r.Form.Get("phone")
+	phone:=c.Request.FormValue("phone")
 	if len(username)<3||len(passwd)<5{
 		c.JSON(http.StatusOK,gin.H{
 			"msg":"无效参数",

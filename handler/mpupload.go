@@ -111,14 +111,17 @@ func UploadPartHandler(c *gin.Context)  {
 	os.MkdirAll(path.Dir(fpath),0744)
 	fd,err:=os.Create(fpath)
 	if err!=nil{
-		c.JSON()
-		w.Write(util.NewRespMsg(-1,"Upload part failed",nil).JSONBytes())
+		c.JSON(http.StatusInternalServerError,gin.H{
+			"msg":"Upload part failed",
+			"code":-1,
+		})
+		//w.Write(util.NewRespMsg(-1,"Upload part failed",nil).JSONBytes())
 		return
 	}
 	defer fd.Close()
 	buf:=make([]byte,1024*1024)
     for{
-    	n,err:=r.Body.Read(buf)
+    	n,err:=c.Request.Body.Read(buf)
     	fd.Write(buf[:n])
     	if err!=nil{
     		break
@@ -127,5 +130,9 @@ func UploadPartHandler(c *gin.Context)  {
 	}
 
 	rConn.Do("HSET","MP_"+uploadID,"chkidx_"+chunkIndex,1)
-	w.Write(util.NewRespMsg(0,"ok",nil).JSONBytes() )
+	//w.Write(util.NewRespMsg(0,"ok",nil).JSONBytes() )
+	c.JSON(http.StatusOK,gin.H{
+		"msg":"ok",
+		"code":0,
+	})
 }

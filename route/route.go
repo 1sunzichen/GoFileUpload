@@ -7,7 +7,10 @@ import (
 )
 func Route() *gin.Engine{
    router:=gin.Default()
-   router.Static("/static/","./static")
+   router.Static("/static", "./static")
+   //router.StaticFS("/static2", http.Dir("my_file_system"))
+   //router.StaticFile("/favicon.ico", "./resources/favicon.ico")
+
    router.GET("/user/signup",handler.SignupHandler)
    router.POST("/user/signup",handler.DoSignupHandler)
 
