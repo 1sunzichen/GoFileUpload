@@ -92,20 +92,33 @@ func DoSignInHandler(c *gin.Context){
 	//url:=result{url:"http://"+r.Host+"/static/view/home.html"}
 	//http.Redirect(w,r,"http://"+r.Host+"/static/view/home.html",http.StatusFound)
 	//w.Write([]byte(`{"code":401,"msg":"http://`+r.Host+`/static/view/home.html"}`))
-		resp:=util.RespMsg{
-			Code:0,
-			Msg:"ok",
-			Data:struct{
-				Location string
-				Username string
-				Token string
-			}{
-				Location:"/static/view/home.html",
-				Username:username,
-				Token:token,
-			},
+	//	resp:=util.RespMsg{
+	//		Code:0,
+	//		Msg:"ok",
+	//		data:struct{
+	//			Location string
+	//			Username string
+	//			Token string
+	//		}{
+	//			Location:"/static/view/home.html",
+	//			Username:username,
+	//			Token:token,
+	//		},
+	//	}
+		var data=struct{
+			Location string
+			Username string
+			Token string
+		}{
+			Location:"/static/view/home.html",
+			Username:username,
+			Token:token,
 		}
-		c.Data(http.StatusOK,"application",resp.JSONBytes())
+		c.JSON(http.StatusOK,gin.H{
+			"msg":"ok",
+			"code":0,
+			"data":data,
+		})
 		//w.Write(resp.JSONBytes())
 }
 func UserInfoHandler(c *gin.Context){
@@ -137,7 +150,7 @@ func UserInfoHandler(c *gin.Context){
 	c.JSON(http.StatusOK,gin.H{
 		"msg":"ok",
 		"code":0,
-		"Data":user,
+		"data":user,
 	})
 }
 

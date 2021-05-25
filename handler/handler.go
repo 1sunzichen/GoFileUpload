@@ -196,11 +196,11 @@ func FileQueryHandler(c *gin.Context){
 		//w.WriteHeader(http.StatusInternalServerError)
 		return
 	}
-    c.JSON(http.StatusOK,gin.H{
-    	"msg":"ok",
-    	"code":0,
-    	"data":data,
-	})
+    //c.JSON(http.StatusOK,gin.H{
+    //	"msg":"ok",
+    //	"code":0,
+    //	"data":data,
+	//})
 	c.Data(http.StatusOK, "application/json", data)
 	//w.Write(data)
 }
@@ -356,9 +356,14 @@ func DownloadURLHandler(c *gin.Context){
 	u.RawQuery = q.Encode()
  //
 	sighedURL:=oss.DownloadURL(row.FileAddr.String,row.FileName.String)
-	c.Data(http.StatusOK,"application/json",[]byte(sighedURL))
+	//c.Data(http.StatusOK,"application/json",[]byte(sighedURL))
     //w.Write([]byte(sighedURL))
+    c.JSON(http.StatusOK,gin.H{
+    	"data":sighedURL,
+    	"msg":"ok",
+    	"code":0,
 
+	})
 
 }
 //BuildLifecycleRule
