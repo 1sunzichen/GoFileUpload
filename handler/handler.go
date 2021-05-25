@@ -111,7 +111,12 @@ func DoUploadHandler(c *gin.Context){
 				//Token:token,
 			},
 		}
-		c.Data(http.StatusOK,"application",resp.JSONBytes())
+		c.JSON(http.StatusOK,gin.H{
+			"msg":"ok",
+			"code":0,
+			"data":resp,
+		})
+		//c.Data(http.StatusOK,"application",resp.JSONBytes())
 		//w.Write(resp.JSONBytes())
 		//http.Redirect(w,r,"/file/uploadprocess/suc",http.StatusFound)
 	}else{
