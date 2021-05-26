@@ -1,5 +1,7 @@
 syntax="proto3";
-package proto;
+//package proto;
+package go.micro.service.user;
+
 service UserService{
  rpc Signup(ReqSignup) returns(RespSignup){}
 }
