@@ -1,0 +1,15 @@
+syntax = "proto3";
+package go.micro.service.download;
+option  go_package="./proto";
+
+service DownloadService{
+   rpc DownloadEntry(ReqEntry) returns(RespEntry){}
+}
+message ReqEntry{
+
+}
+message RespEntry{
+    int32 code=1;
+    string message =2;
+    string entry=3;
+}

@@ -25,9 +25,9 @@ func Route() *gin.Engine{
 	router.POST("/file/mpupload/complete",handler.CompleteUploadHandler)
 
 	//http.Handle("/", http.FileServer(http.Dir("/static")))
-	router.POST("/file/uploadprocess",handler.DoUploadHandler)
-	router.GET("/file/uploadprocess",handler.UploadHandler)
-	router.GET("/file/uploadprocess/suc",handler.UploadSucHandler)
+	router.POST("/file/upload",handler.DoUploadHandler)
+	router.GET("/file/upload",handler.UploadHandler)
+	router.GET("/file/upload/suc",handler.UploadSucHandler)
 	router.POST("/file/download",handler.DownloadHandler)
 	router.POST("/file/meta",handler.GetFileMetaHandler)
 	router.POST("/file/query",handler.FileQueryHandler)

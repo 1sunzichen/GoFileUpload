@@ -81,13 +81,13 @@
         console.log(body,'true',)
 
          // window.location.href=JSON.parse(body)["msg"]
-        localStorage.setItem("token", body.data.Token)
-        localStorage.setItem("username",body.data.Username)
+        localStorage.setItem("token", body.token)
+        localStorage.setItem("username",username.value)
         // 增加上传入口ip:port
         // localStorage.setItem("uploadEntry", body.data.UploadEntry);
         // 增加下载入口ip:port
         // localStorage.setItem("downloadEntry", body.data.DownloadEntry);
-         window.location.href = body.data.Location;
+         window.location.href = "/static/view/home.html"
       }
     });
   }

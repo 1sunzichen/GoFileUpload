@@ -61,7 +61,7 @@
   function onUpload() {
 
 
-      var upUrl = "/file/uploadprocess?username=" + localStorage.getItem("username")
+      var upUrl = "http://localhost:18080/file/upload?username=" + localStorage.getItem("username")
               + "&token=" + localStorage.getItem("token");
       // var upEntry = localStorage.getItem("uploadEntry");
       // if (upEntry != "" ) {

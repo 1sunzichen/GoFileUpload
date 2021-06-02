@@ -89,22 +89,7 @@ func DoSignInHandler(c *gin.Context){
 		return
 	}
 	//登录成功后 重定向到首页
-	//url:=result{url:"http://"+r.Host+"/static/view/home.html"}
-	//http.Redirect(w,r,"http://"+r.Host+"/static/view/home.html",http.StatusFound)
-	//w.Write([]byte(`{"code":401,"msg":"http://`+r.Host+`/static/view/home.html"}`))
-	//	resp:=util.RespMsg{
-	//		Code:0,
-	//		Msg:"ok",
-	//		data:struct{
-	//			Location string
-	//			Username string
-	//			Token string
-	//		}{
-	//			Location:"/static/view/home.html",
-	//			Username:username,
-	//			Token:token,
-	//		},
-	//	}
+
 		var data=struct{
 			Location string
 			Username string
@@ -122,18 +107,7 @@ func DoSignInHandler(c *gin.Context){
 		//w.Write(resp.JSONBytes())
 }
 func UserInfoHandler(c *gin.Context){
-
-	//1.解析请求参数
-	//r.ParseForm()
 	username:=c.Request.FormValue("username")
-	//token:=r.Form.Get("token")
-	////2.验证token是否有效
-	//isVaildToken:=IsTokenVaild(token)
-	//if !isVaildToken{
-	//	w.WriteHeader(http.StatusForbidden)
-	//	return
-	//}
-	//3.查询用户信息
 	user,err:=dblayer.GetUserInfo(username)
 	if err!=nil{
 		//w.WriteHeader(http.StatusForbidden)
@@ -141,12 +115,6 @@ func UserInfoHandler(c *gin.Context){
 		return
 	}
 	//4.组装并且响应用户数据
-	//resp:=util.RespMsg{
-	//	Code: 0,
-	//	Msg: "OK",
-	//	Data:user,
-	//}
-	//w.Write(resp.JSONBytes())
 	c.JSON(http.StatusOK,gin.H{
 		"msg":"ok",
 		"code":0,

@@ -67,8 +67,8 @@ func CompleteUploadHandler(c *gin.Context){
 	defer rConn.Close()
 	data,err:=redis.Values(rConn.Do("HGETALL","MP_"+uploadid))
      if err!=nil{
-     	c.JSON(http.StatusOK,util.NewRespMsg(-1,"complete uploadprocess failed",nil))
-     	//w.Write(util.NewRespMsg(-1,"complete uploadprocess failed",nil).JSONBytes())
+     	c.JSON(http.StatusOK,util.NewRespMsg(-1,"complete upload failed",nil))
+     	//w.Write(util.NewRespMsg(-1,"complete upload failed",nil).JSONBytes())
      	return
      }
 

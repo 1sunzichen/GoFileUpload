@@ -6,10 +6,15 @@ import (
 	"filestore-server/config"
 	dbplayer "filestore-server/db"
 	"filestore-server/mq"
+	"filestore-server/service/transfer/process"
+	_ "github.com/micro/go-plugins/registry/consul/v2"
+
 	"filestore-server/store/oss"
 	"fmt"
+	"github.com/micro/go-micro/v2"
 	"log"
 	"os"
+	"time"
 )
 
 func ProcessTransfer(msg []byte)bool{
@@ -55,15 +60,33 @@ func ProcessTransfer(msg []byte)bool{
 
 
 func startRPCService() {
+	service := micro.NewService(
+		micro.Name("go.micro.service.transfer"), // 服务名称
+		micro.RegisterTTL(time.Second*10),       // TTL指定从上一次心跳间隔起，超过这个时间服务会被服务发现移除
+		micro.RegisterInterval(time.Second*5),   // 让服务在指定时间内重新注册，保持TTL获取的注册时间有效
+	)
+	service.Init()
 	// 初始化mq client
-   mq.Init()
 
+
+	if err := service.Run(); err != nil {
+		fmt.Println(err)
+	}
+}
+
+func startTranserService() {
+	if !config.AsyncTransferEnable {
+		log.Println("异步转移文件功能目前被禁用，请检查相关配置")
+		return
+	}
+	log.Println("文件转移服务启动中，开始监听转移任务队列...")
+	mq.Init()
 	mq.StartConsumer(
 		config.TransOSSQueueName,
 		"transfer_oss",
-		ProcessTransfer)
+		process.Transfer)
 }
 func main(){
-	//go startTranserService()
+	go startTranserService()
 	startRPCService()
 }

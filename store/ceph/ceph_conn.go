@@ -11,7 +11,7 @@ func GetCephConnection() *s3.S3 {
 	}
 	auth:=aws.Auth{
 		AccessKey: "",
-		SecretKey: ""
+		SecretKey: "",
 	}
 	curRegion:=aws.Region{
 		Name:                 "default",

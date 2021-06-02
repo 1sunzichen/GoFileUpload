@@ -118,7 +118,7 @@
           return;
         }
         console.log(data,'data')
-        var dlHost = 'http://localhost:8080';
+        var dlHost = 'http://localhost:38080';
         var dlEntry = localStorage.getItem('downloadEntry')||"";
         if (dlEntry != '') {
           if (dlEntry.indexOf('http:')<0) {
@@ -184,12 +184,7 @@
         console.log(body,'body')
         try {
           console.log(body,'body')
-          window.open(body.data)
-          // alert("文件即将下载自: " + body);
-          // var elemIF = document.createElement("iframe");
-          // elemIF.src = body;
-          // elemIF.style.display = "none";
-          // document.body.appendChild(elemIF);
+          window.open(body)
         } catch (e) {
           alert(e);
         }

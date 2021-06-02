@@ -20,10 +20,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2a9c0d4-a371-447d-802a-da151a9451e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/common/code.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/account/handler/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/account/handler/user_file.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/account/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/apigw/handler/auth.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/apigw/handler/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/apigw/handler/user_file.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/apigw/route/router.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/download/api/download.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/download/config/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/download/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/download/proto/download.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/download/route/route.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/download/rpc/entry.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/start-all.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/stop-all.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/transfer/process/transfer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/upload/api/mpupload.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/upload/api/upload.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/upload/config/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/upload/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/upload/route/route.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/upload/rpc/entry.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/upload/upload.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/fileserver.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/fileserver.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/mpupload.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/mpupload.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route/route.go" beforeDir="false" afterPath="$PROJECT_DIR$/route/route.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/account/proto/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/service/account/proto/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/transfer/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/transfer/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/uploadprocess/process.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/view/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/view/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/view/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/view/signin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/view/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/view/upload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/ceph/ceph_conn.go" beforeDir="false" afterPath="$PROJECT_DIR$/store/ceph/ceph_conn.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +72,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Go Application" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
@@ -48,7 +87,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultGoTemplateProperty" value="Go Application" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
@@ -58,14 +97,16 @@
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/js" />
-      <recent name="$PROJECT_DIR$/static/view" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Go\GoFileUpload\service\download\proto" />
+      <recent name="F:\Go\GoFileUpload\service\uploadprocess" />
+      <recent name="$PROJECT_DIR$/static/js" />
+      <recent name="$PROJECT_DIR$/static/view" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -155,6 +196,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="56" key="SettingsEditor/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1621949007102" />
+    <state x="465" y="146" width="605" height="532" key="find.popup" timestamp="1622614168962">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="146" width="605" height="532" key="find.popup/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1622614168962" />
     <state x="587" y="142" key="ftp.server.browser" timestamp="1621948997660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

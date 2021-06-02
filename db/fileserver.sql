@@ -70,7 +70,7 @@ CREATE TABLE `tbl_user` (
 -- Records of tbl_user
 -- ----------------------------
 BEGIN;
-INSERT INTO `tbl_user` VALUES (26, 'uploadprocess', '1a48f352ffe1e15d1c4611b22615df0092ec194c', '', '', 0, 0, '2021-03-17 23:10:01', '2021-03-17 23:10:01', NULL, 0);
+INSERT INTO `tbl_user` VALUES (26, 'upload', '1a48f352ffe1e15d1c4611b22615df0092ec194c', '', '', 0, 0, '2021-03-17 23:10:01', '2021-03-17 23:10:01', NULL, 0);
 INSERT INTO `tbl_user` VALUES (33, 'admin', '1a48f352ffe1e15d1c4611b22615df0092ec194c', '', '1', 0, 0, '2021-03-17 23:25:34', '2021-03-17 23:25:34', NULL, 0);
 INSERT INTO `tbl_user` VALUES (34, 'admin', '1a48f352ffe1e15d1c4611b22615df0092ec194c', '', '3', 0, 0, '2021-03-17 23:25:54', '2021-03-17 23:25:54', NULL, 0);
 COMMIT;

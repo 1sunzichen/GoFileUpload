@@ -118,7 +118,7 @@ func DoUploadHandler(c *gin.Context){
 		})
 		//c.Data(http.StatusOK,"application",resp.JSONBytes())
 		//w.Write(resp.JSONBytes())
-		//http.Redirect(w,r,"/file/uploadprocess/suc",http.StatusFound)
+		//http.Redirect(w,r,"/file/upload/suc",http.StatusFound)
 	}else{
 		c.JSON(http.StatusOK,gin.H{
 			"msg":"上传失败",
@@ -130,7 +130,7 @@ func DoUploadHandler(c *gin.Context){
 
 }
 func UploadHandler(c *gin.Context){
-	c.Redirect(http.StatusFound,"/static/view/uploadprocess.html")
+	c.Redirect(http.StatusFound,"/static/view/upload.html")
 }
 //上传已完成
 func UploadSucHandler(c *gin.Context){
