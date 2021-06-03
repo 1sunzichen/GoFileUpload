@@ -20,48 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2a9c0d4-a371-447d-802a-da151a9451e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common/code.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/account/handler/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/account/handler/user_file.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/account/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/apigw/handler/auth.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/apigw/handler/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/apigw/handler/user_file.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/apigw/route/router.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/download/api/download.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/download/config/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/download/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/download/proto/download.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/download/route/route.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/download/rpc/entry.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/start-all.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/stop-all.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/transfer/process/transfer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/upload/api/mpupload.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/upload/api/upload.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/upload/config/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/upload/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/upload/route/route.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/upload/rpc/entry.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/upload/upload.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/fileserver.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/fileserver.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/mpupload.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/mpupload.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/route/route.go" beforeDir="false" afterPath="$PROJECT_DIR$/route/route.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/account/proto/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/service/account/proto/user.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/transfer/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/transfer/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/uploadprocess/process.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/view/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/view/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/view/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/view/signin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/view/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/view/upload.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/ceph/ceph_conn.go" beforeDir="false" afterPath="$PROJECT_DIR$/store/ceph/ceph_conn.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +52,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Irislottery" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
@@ -176,6 +135,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="378" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800/1280.129.1280.720@0.0.1280.800" timestamp="1615454204596" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1622702520684">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1622702520684" />
     <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1615385492310">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
