@@ -6,7 +6,7 @@
   <link href="/static/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" id="456"/>
   <!-- if using RTL (Right-To-Left) orientation, load the RTL CSS file after fileinput.css by uncommenting below -->
   <!-- link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.9/css/fileinput-rtl.min.css" media="all" rel="stylesheet" type="text/css" /-->
-  <script src="/static/js/jquery-3.2.1.js"></script>
+  <script src="/static/js/jquery-3.6.0.js"></script>
   <!-- piexif.min.js is needed for auto orienting image files OR when restoring exif data in resized images and when you 
         wish to resize images before upload. This must be loaded before fileinput.min.js -->
   <script src="/static/js/piexif.min.js" type="text/javascript"></script>
@@ -38,7 +38,7 @@
     </div>
     <div style="width:60%;height:30%;text-align:center;margin: 50px auto;">
       <form id="upForm" action="#" method="post" enctype="multipart/form-data">
-        <!-- <input id="file" name="file" type="file" class="file" data-msg-placeholder="选择文件"> -->
+<!--         <input id="file" name="file" type="file" class="file" data-msg-placeholder="选择文件">-->
         <input id="file" type="file" name="file" />
         <button id="上传" type="button" onclick="onUpload();">upload</button>
       </form>
@@ -57,7 +57,7 @@
 
   function onUpload() {
     // window.onload=function (){
-
+    console.log("hello world",$('#upForm')[0],$)
     var upUrl = "/file/upload"
     //         + queryParams();
     // var upEntry = localStorage.getItem("uploadEntry");
@@ -72,10 +72,10 @@
     $.ajax({
       url: upUrl,
       type: 'POST',
-      // cache: false,
+      cache: false,
       data: new FormData($('#upForm')[0]),
-      // processData: false,
-      // contentType: false,
+      processData: false,
+      contentType: false,
       error: function (err) {
         alert('请求报错信息: ' + JSON.stringify(err));
       },
