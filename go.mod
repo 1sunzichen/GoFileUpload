@@ -1,8 +1,5 @@
 module filestore-server
 
-<<<<<<< HEAD
-go 1.14
-=======
 go 1.14
 
 require (
@@ -11,4 +8,3 @@ require (
 	github.com/yuin/gopher-lua v0.0.0-20200816102855-ee81675732da
 	gopkg.in/amz.v1 v1.0.0-20150111123259-ad23e96a31d2
 )
->>>>>>> part5-2

@@ -9,14 +9,11 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
-<<<<<<< HEAD
 	"time"
-=======
 	"strconv"
 	"time"
-
      dbplayer "filestore-server/db"
->>>>>>> part5-2
+
 )
 
 func UploadHandler(w http.ResponseWriter,r *http.Request){
