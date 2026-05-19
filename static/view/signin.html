@@ -83,9 +83,9 @@
          // window.location.href=JSON.parse(body)["msg"]
         localStorage.setItem("token", JSON.parse(body).data.Token)
         localStorage.setItem("username", JSON.parse(body).data.Username)
-        // 增加上传入口ip:port
+        // set upload entry ip:port
         // localStorage.setItem("uploadEntry", body.data.UploadEntry);
-        // 增加下载入口ip:port
+        // set download entry ip:port
         // localStorage.setItem("downloadEntry", body.data.DownloadEntry);
          window.location.href = JSON.parse(body).data.Location;
       }

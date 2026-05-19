@@ -32,14 +32,14 @@
     }
 
     function addListeners(req) {
-      //监听进度事件
+      // listen for progress events
       req.onprogress = function (evt) {
         if (evt.lengthComputable) {
-          // 第一次获取文件总大小
+          // first time: get total file size
           if (filesize < 0) {
             filesize = evt.total;
             req.abort();
-            // 真正开始下载文件
+            // actually start downloading the file
             resumeDownload();
           } else {
             var percentComplete = (lastByteLoaded + evt.loaded) / filesize;
@@ -84,16 +84,16 @@
 
     function abortDownload() {
       if (!paused) {
-        // 暂停下载，结束当前partial download
+        // pause download: abort current partial download
         req.abort();
       } else {
-        // 继续下载，开始下一个指定起始位置的partial download
+        // resume download: start next partial download from specified byte offset
         resumeDownload();
       }
       paused = !paused;
     }
 
-    // 指定range 下载
+    // download with specified range header
     function resumeDownload() {
       req.open("GET", url, true);
       addListeners(req);
