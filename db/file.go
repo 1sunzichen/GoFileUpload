@@ -4,9 +4,9 @@ import (
 	mydb "filestore-server/db/mysql"
 	"fmt"
 )
-//文件上传 接口
+// File upload interface
 func OnFileUploadFinished(filehash string,filename string,filesize int64,fileaddr string)bool {
-	//Prepare 防止sql 注入攻击
+	// Prepare prevents SQL injection attacks
 	stmt,err:=mydb.DBConn().Prepare(
 		"insert ignore into tbl_file(`file_sha1`,`file_name`,`file_size`,"+
 			"`file_addr`,`status`) values(?,?,?,?,1)",
@@ -36,7 +36,7 @@ type TableFile struct{
 	FileSize sql.NullInt64
 	FileAddr sql.NullString
 }
-//从mysql 获取文件元信息
+// Get file metadata from MySQL
 func GetFileMeta(filehash string)(*TableFile,error){
 	stmt,err:=mydb.DBConn().Prepare(
 		"select file_sha1,file_addr,file_name,file_size from tbl_file " +

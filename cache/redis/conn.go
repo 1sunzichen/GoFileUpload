@@ -14,7 +14,7 @@ var (
 )
 func newRedisPool() *redis.Pool{
  return &redis.Pool{
- 	MaxActive: 30,//数量
+ 	MaxActive: 30, // max active connections
  	MaxIdle: 50,
  	IdleTimeout: 300*time.Second,
  	Dial: func()(redis.Conn,error) {

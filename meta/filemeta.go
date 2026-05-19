@@ -16,18 +16,18 @@ var fileMetas map[string]FileMeta
 func init(){
 	fileMetas=make(map[string]FileMeta)
 }
-//新增/更新文件原信息
+// Add/Update file metadata (in-memory)
 func UpdateFileMeta(fmeta FileMeta)  {
 	fileMetas[fmeta.FileSha1]=fmeta
 }
-//新增/更新文件元信息 db
+// Add/Update file metadata (database)
 func UpdateFileMetaDb(fmeta FileMeta)bool{
 	return mydb.OnFileUploadFinished(fmeta.FileSha1,fmeta.FileName,fmeta.FileSize,fmeta.Location)
 }
 func GetFileMeta(fileSha1 string)FileMeta{
 	return fileMetas[fileSha1]
 }
-//从 mysql 获取文件元信息
+// Get file metadata from MySQL
 func GetFileMetaDB(fileSha1 string)(FileMeta,error){
 	tfile,err:=mydb.GetFileMeta(fileSha1)
 	if err!=nil{
@@ -42,7 +42,7 @@ func GetFileMetaDB(fileSha1 string)(FileMeta,error){
 	return fmeta,nil
 }
 
-//RemoveFileMeta 删除
+// RemoveFileMeta deletes file metadata
 func RemoveFileMeta(fileSha1 string){
 	delete(fileMetas,fileSha1)
 }

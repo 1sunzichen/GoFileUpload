@@ -18,7 +18,7 @@ func NewRespMsg(code int,msg string,data interface{})*RespMsg  {
 		Data:data,
 	}
 }
-//JSONBytes   对象转json格式的string
+// JSONBytes converts an object to a JSON-format byte slice
 func (resp *RespMsg)JSONBytes()[]byte{
 	r,err:=json.Marshal(resp)
 	if err!=nil{
@@ -27,7 +27,7 @@ func (resp *RespMsg)JSONBytes()[]byte{
 	return r
 }
 
-//JSONString 对象转json格式的string
+// JSONString converts an object to a JSON-format string
 func (resp *RespMsg)JSONString()string{
 	r,err:=json.Marshal(resp)
 	if err!=nil{

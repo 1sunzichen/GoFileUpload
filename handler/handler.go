@@ -18,7 +18,7 @@ import (
 
 func UploadHandler(w http.ResponseWriter,r *http.Request){
 		if r.Method=="GET"{
-			//返回上传html页面
+		// Return upload HTML page
 			data,err:=ioutil.ReadFile("./static/view/upload.html")
 			if err !=nil{
 				io.WriteString(w,"interError")
@@ -66,7 +66,7 @@ func UploadHandler(w http.ResponseWriter,r *http.Request){
 =======
             //meta.UpdateFileMeta(fileMeta)
             _=meta.UpdateFileMetaDb(fileMeta)
-            //更新用户表文件表记录
+            // Update user file table record
             r.ParseForm()
             username:=r.Form.Get("username")
             suc:=dbplayer.OnUserFileUploadFinished(username,fileMeta.FileSha1,fileMeta.FileName,fileMeta.FileSize)
@@ -92,23 +92,23 @@ func UploadHandler(w http.ResponseWriter,r *http.Request){
 >>>>>>> part5-2
 		}
 }
-//上传已完成
+// Upload completed
 func UploadSucHandler(w http.ResponseWriter,r *http.Request){
 	io.WriteString(w,"Upload finished")
 }
 <<<<<<< HEAD
-// 获取文件元信息
+// Get file metadata
 func GetFileMetaHandler(w http.ResponseWriter,r *http.Request){
 	r.ParseForm()
 	filehash:=r.Form["filehash"][0]
 	fMeta:=meta.GetFileMeta(filehash);
 	data,err:=json.Marshal(fMeta)
 =======
-//获取文件元信息
+// Get file metadata
 func GetFileMetaHandler(w http.ResponseWriter,r *http.Request){
-	//ParseForm解析URL中的查询字符串，并将解析结果更新到r.Form字段。
-	//对于POST或PUT请求，ParseForm还会将body当作表单解析，并将结果既更新到r.PostForm也更新到r.Form。
-	//解析结果中，POST或PUT请求主体要优先于URL查询字符串（同名变量，主体的值在查询字符串的值前面）。
+	// ParseForm parses the URL query string and updates r.Form.
+	// For POST or PUT requests, ParseForm also parses the body as a form and updates both r.PostForm and r.Form.
+	// In the parsed results, POST or PUT body values take precedence over URL query string values.
 	r.ParseForm()
 	filehash:=r.Form["filehash"][0]
 	//fMeta:=meta.GetFileMeta(filehash)
@@ -122,7 +122,7 @@ func GetFileMetaHandler(w http.ResponseWriter,r *http.Request){
 	w.Write(data)
 }
 
-//下载信息
+// Download info
 func DownloadHandler(w http.ResponseWriter,r *http.Request)  {
 	
 =======
@@ -133,13 +133,13 @@ func DownloadHandler(w http.ResponseWriter,r *http.Request)  {
 	}
 	w.Write(d)
 }
-//批量获取文件元信息
+// Batch query file metadata
 func FileQueryHandler(w http.ResponseWriter,r *http.Request){
-	//ParseForm解析URL中的查询字符串，并将解析结果更新到r.Form字段。
-	//对于POST或PUT请求，ParseForm还会将body当作表单解析，并将结果既更新到r.PostForm也更新到r.Form。
-	//解析结果中，POST或PUT请求主体要优先于URL查询字符串（同名变量，主体的值在查询字符串的值前面）。
+	// ParseForm parses the URL query string and updates r.Form.
+	// For POST or PUT requests, ParseForm also parses the body as a form and updates both r.PostForm and r.Form.
+	// In the parsed results, POST or PUT body values take precedence over URL query string values.
 	r.ParseForm()
-	//字符串转数组
+	// Convert string to int
 	limitCnt,_:=strconv.Atoi(r.Form.Get("limit"))
 	username:=r.Form.Get("username");
 	fmt.Println(limitCnt,username)
@@ -169,7 +169,7 @@ func DownloadHandler(w http.ResponseWriter,r *http.Request){
 		return
 	}
 	defer f.Close()
-	//小文件
+	// Small file
 	data,err:=ioutil.ReadAll(f)
 	if err !=nil{
 		w.WriteHeader(http.StatusInternalServerError)
@@ -206,7 +206,7 @@ func FileMetaUpdateHandler(w http.ResponseWriter,r *http.Request){
 	w.Write(data)
 
 }
-//删除接口
+// Delete endpoint
 func FileDeleteHandler(w http.ResponseWriter,r *http.Request){
 	r.ParseForm()
 	filesha1:=r.Form.Get("filehash")

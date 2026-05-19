@@ -50,7 +50,7 @@ func InitialMultipartUploadHandler(w http.ResponseWriter,r *http.Request){
 }
 
 
-    //CompleteUploadHandler(w http.Response) 通知上传合并
+    // CompleteUploadHandler notifies to merge upload chunks
 func CompleteUploadHandler(w http.ResponseWriter,r *http.Request){
 	r.ParseForm()
 	uploadid:=r.Form.Get("uploadid")
@@ -73,16 +73,16 @@ func CompleteUploadHandler(w http.ResponseWriter,r *http.Request){
 	 	k:=string(data[i].([]byte))
 	 	v:=string(data[i+1].([]byte))
 	 	if k=="chunkcount"{
-	 		totalCount,_=strconv.Atoi(v)//理论值
+	 		totalCount,_=strconv.Atoi(v)// expected value
 	 	}else if strings.HasPrefix(k,"chkidx_")&&v=="1"{
-	 		chunkCount++//实际值
+	 		chunkCount++// actual value
 	 	}
 	 }
 	 if totalCount!=chunkCount{
 	 	w.Write(util.NewRespMsg(-2,"invaild request",nil).JSONBytes())
 	 	return
 	 }
-	 //TODO 合并分块
+	// TODO Merge chunks
     fsize,_:=strconv.Atoi(filesize)
     dblayer.OnFileUploadFinished(filehash,filename,int64(fsize),"")
     dblayer.OnUserFileUploadFinished(username,filehash,filename,int64(fsize))
@@ -92,12 +92,12 @@ func CompleteUploadHandler(w http.ResponseWriter,r *http.Request){
 }
 
 func UploadPartHandler(w http.ResponseWriter,r *http.Request)  {
-	//1.解析用户请求参数
+	// 1. Parse user request parameters
 	r.ParseForm()
 	 //username:=r.Form.Get("username")
 	 uploadID:=r.Form.Get("uploadid")
 	chunkIndex:=r.Form.Get("index")
-	//2.获得redis 链接池中的一个链接
+	// 2. Get a connection from the Redis pool
 	rConn:=rPool.RedisPool().Get()
 	defer rConn.Close()
 	//3.

@@ -24,7 +24,7 @@ func GetCephConnection() *s3.S3 {
 	}
 	return s3.New(auth,curRegion)
 }
-//获得bucket 对象
+// Get bucket object
 func GetCephBucket(bucket string)*s3.Bucket{
 	conn:=GetCephConnection()
 	return conn.Bucket(bucket)
